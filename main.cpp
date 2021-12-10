@@ -2,13 +2,14 @@
 // Kate Gregories amazing tut: https://app.pluralsight.com/library/courses/learn-program-cplusplus/table-of-contents
 
 #include <iostream>
+#include <cstdlib>
 
 using std::cout;
 using std::cin;
 
 int main()
 {
-    int answer = 7;
+    int answer = rand() % 10;   // TODO: Improve this
     int guess;
     bool keepGuessing = true;
 
@@ -34,4 +35,6 @@ int main()
     }
 
     cout << '\n' << "Yes! You did it! Congratulations!" << '\n';
+
+    return 0;
 }
