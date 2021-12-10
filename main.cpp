@@ -1,5 +1,35 @@
+// Simple game for practicing C++. Learning from
+// Kate Gregories amazing tut: https://app.pluralsight.com/library/courses/learn-program-cplusplus/table-of-contents
+
 #include <iostream>
 
 using std::cout;
 using std::cin;
 
+int main()
+{
+    int answer = 7;
+    int guess;
+    bool keepGuessing = true;
+
+    while (answer)
+    {
+        cout << "Welcome to the Guess My Number!" << '\n' << "Please input your guess:";
+        cin >> guess;
+
+        if (guess > answer)
+        {
+            cout << '\n' << "Not quite! Try a little less!" << '\n';
+        }
+        if (guess > answer)
+        {
+            cout << '\n' << "Not quite! Try a little more!" << '\n';
+        }
+        if (guess == answer)
+        {
+            keepGuessing = false;
+        }
+    }
+
+    cout << '\n' << "Yes! You did it! Congratulations!" << '\n';
+}
