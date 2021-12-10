@@ -12,18 +12,20 @@ int main()
     int guess;
     bool keepGuessing = true;
 
-    while (answer)
+    cout << '\n' << "Welcome to the Guess My Number!" << '\n';
+
+    while (keepGuessing)
     {
-        cout << "Welcome to the Guess My Number!" << '\n' << "Please input your guess:";
+        cout << '\n' << "Please input your guess: " << '\n';
         cin >> guess;
 
-        if (guess > answer)
+        if (guess < answer)
         {
-            cout << '\n' << "Not quite! Try a little less!" << '\n';
+            cout << '\n' << "Not quite! Try a little more!" << '\n';
         }
         if (guess > answer)
         {
-            cout << '\n' << "Not quite! Try a little more!" << '\n';
+            cout << '\n' << "Not quite! Try a little less!" << '\n';
         }
         if (guess == answer)
         {
